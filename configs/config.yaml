@@ -1,0 +1,60 @@
+seed: 42
+
+data:
+  raw_texts: "data/raw/texts.csv"
+  corpus: "data/annotations/corpus.csv"
+
+  text_column: "Chunk"
+  source_column: "Source"
+
+  allowed_sources:
+    - rapport
+    - entreprise
+
+  train_size: 0.70
+  validation_size: 0.15
+  test_size: 0.15
+
+model:
+  heavy: "almanach/camembertv2-base"
+  light: "cmarkea/distilcamembert-base"
+
+  selected: "light"
+
+  method: "lora"
+
+  max_length: 128
+  dropout: 0.15
+
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+
+  target_modules:
+    - query
+    - value
+
+training:
+  epochs: 15
+
+  batch_size: 16
+  eval_batch_size: 32
+
+  learning_rate_full: 0.00002
+  learning_rate_lora: 0.0001
+  learning_rate_frozen: 0.0005
+
+  weight_decay: 0.01
+  warmup_ratio: 0.10
+
+  early_stopping_patience: 3
+
+  presence_loss_weight: 1.0
+  status_loss_weight: 1.0
+
+artifacts:
+  checkpoints: "artifacts/checkpoints"
+  final_model: "artifacts/final_model"
+  metrics: "artifacts/metrics"
+  plots: "artifacts/plots"

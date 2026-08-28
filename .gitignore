@@ -1,0 +1,693 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+.venv/
+venv/
+.env
+
+.idea/
+.vscode/
+
+.pytest_cache/
+.ipynb_checkpoints/
+
+artifacts/checkpoints/*
+artifacts/final_model/*
+artifacts/metrics/*
+artifacts/plots/*
+
+data/processed/*
+data/annotations/backups/*
+
+!artifacts/checkpoints/.gitkeep
+!artifacts/final_model/.gitkeep
+!artifacts/metrics/.gitkeep
+!artifacts/plots/.gitkeep
+!data/processed/.gitkeep
+!data/annotations/backups/.gitkeep
+
+config/user_settings.json
+
+
+# =============================================================================
+# .gitignore — SECURITY-FIRST / PUBLIC REPOSITORY READY
+# =============================================================================
+# Objectif :
+# - empêcher le commit accidentel de secrets et données locales
+# - exclure les dépendances, builds, caches, logs et fichiers temporaires
+# - préparer un dépôt destiné à pouvoir devenir PUBLIC
+#
+# IMPORTANT :
+# .gitignore ne protège PAS les fichiers déjà présents dans l'historique Git.
+# =============================================================================
+
+
+# =============================================================================
+# 1. SECRETS / ENVIRONMENT / CREDENTIALS
+# =============================================================================
+
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+*.env
+*.env.local
+*.local.env
+
+secrets/
+secret/
+.secrets/
+private/
+.private/
+
+credentials/
+.credentials/
+
+credentials.json
+credentials.yml
+credentials.yaml
+
+secrets.json
+secrets.yml
+secrets.yaml
+
+auth.json
+auth.local.json
+
+config.local
+config.local.*
+*.local.config
+*.local.json
+*.local.yml
+*.local.yaml
+
+# Tokens / credentials
+*.token
+*.tokens
+*.secret
+*.secrets
+*.credentials
+
+# =============================================================================
+# 2. CRYPTOGRAPHIC KEYS / CERTIFICATES
+# =============================================================================
+
+*.pem
+*.key
+*.pkey
+*.priv
+*.private
+*.crt
+*.cer
+*.der
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+*.gpg
+*.pgp
+*.asc
+
+id_rsa
+id_rsa.*
+id_dsa
+id_dsa.*
+id_ecdsa
+id_ecdsa.*
+id_ed25519
+id_ed25519.*
+
+authorized_keys
+known_hosts
+
+# =============================================================================
+# 3. SSH / CLOUD / INFRASTRUCTURE CREDENTIALS
+# =============================================================================
+
+.ssh/
+
+.aws/
+.azure/
+.gcloud/
+
+.kube/
+kubeconfig
+kubeconfig.*
+
+.docker/config.json
+
+# =============================================================================
+# 4. TERRAFORM / INFRASTRUCTURE
+# =============================================================================
+
+.terraform/
+.terraform.lock.hcl
+
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+
+terraform.tfstate
+terraform.tfstate.backup
+
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+crash.log
+crash.*.log
+
+# =============================================================================
+# 5. ANSIBLE
+# =============================================================================
+
+*.retry
+
+vault.yml
+vault.yaml
+vault-*.yml
+vault-*.yaml
+
+ansible-vault-password
+.vault_pass
+.vault-password
+
+# =============================================================================
+# 6. DATABASES / LOCAL DATA
+# =============================================================================
+
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+
+*.mdb
+*.accdb
+
+database/
+databases/
+
+data/
+local-data/
+private-data/
+
+# Database dumps
+*.sql
+*.dump
+*.dmp
+
+dumps/
+backups/
+
+# =============================================================================
+# 7. LOGS
+# =============================================================================
+
+*.log
+logs/
+log/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+debug.log
+error.log
+
+# =============================================================================
+# 8. TEMPORARY FILES
+# =============================================================================
+
+tmp/
+temp/
+.tmp/
+.temp/
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.old
+*.orig
+
+*~
+.#*
+
+# =============================================================================
+# 9. BACKUPS / ARCHIVES
+# =============================================================================
+
+backup/
+backups/
+
+*.backup
+*.bak
+
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.gz
+
+# =============================================================================
+# 10. WINDOWS
+# =============================================================================
+
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+Desktop.ini
+
+$RECYCLE.BIN/
+
+*.lnk
+
+*.stackdump
+
+*Zone.Identifier*
+*:Zone.Identifier
+
+# =============================================================================
+# 11. macOS
+# =============================================================================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+Icon?
+
+._*
+
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+.com.apple.timemachine.donotpresent
+
+# =============================================================================
+# 12. LINUX
+# =============================================================================
+
+.directory
+
+.Trash-*
+.nfs*
+
+.fuse_hidden*
+
+# =============================================================================
+# 13. VS CODE
+# =============================================================================
+
+.vscode/*
+
+# Keep shared configuration if desired:
+!.vscode/extensions.json
+!.vscode/settings.example.json
+
+*.code-workspace
+
+# =============================================================================
+# 14. JETBRAINS
+# =============================================================================
+
+.idea/
+
+*.iml
+*.ipr
+*.iws
+
+out/
+
+# =============================================================================
+# 15. OTHER EDITORS
+# =============================================================================
+
+.history/
+.project
+.settings/
+.classpath
+
+*.sublime-workspace
+
+# =============================================================================
+# 16. NODE.JS / JAVASCRIPT / TYPESCRIPT
+# =============================================================================
+
+node_modules/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.pnpm-store/
+
+.npm/
+.yarn/cache/
+.yarn/unplugged/
+
+# Builds
+dist/
+build/
+out/
+
+# Framework caches
+.next/
+.nuxt/
+.output/
+.svelte-kit/
+.angular/
+.cache/
+.parcel-cache/
+.turbo/
+
+# Vite
+vite.config.*.timestamp-*
+
+# Coverage
+coverage/
+.nyc_output/
+
+# =============================================================================
+# 17. PYTHON
+# =============================================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.so
+
+.Python
+
+venv/
+env/
+ENV/
+.venv/
+.envdir/
+
+pip-wheel-metadata/
+
+*.egg
+*.egg-info/
+.eggs/
+
+dist/
+build/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+.coverage
+.coverage.*
+htmlcov/
+
+.tox/
+.nox/
+
+.ipynb_checkpoints/
+
+# =============================================================================
+# 18. PHP / COMPOSER
+# =============================================================================
+
+vendor/
+
+composer.phar
+
+.phpunit.result.cache
+.phpunit.cache/
+
+auth.json
+
+# =============================================================================
+# 19. JAVA / KOTLIN / GRADLE
+# =============================================================================
+
+*.class
+*.jar
+*.war
+*.ear
+
+.gradle/
+build/
+
+target/
+
+bin/
+
+hs_err_pid*
+
+# =============================================================================
+# 20. RUST
+# =============================================================================
+
+target/
+
+**/*.rs.bk
+
+# Cargo.lock:
+# Keep Cargo.lock for applications.
+# Libraries may choose whether to commit it.
+
+# =============================================================================
+# 21. GO
+# =============================================================================
+
+bin/
+
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+*.test
+*.out
+
+go.work
+
+# =============================================================================
+# 22. C / C++
+# =============================================================================
+
+*.o
+*.obj
+
+*.a
+*.lib
+
+*.so
+*.dylib
+*.dll
+
+*.exe
+
+*.out
+
+cmake-build-*/
+
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+Makefile.local
+
+# =============================================================================
+# 23. .NET
+# =============================================================================
+
+[Bb]in/
+[Oo]bj/
+
+.vs/
+
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+TestResults/
+
+# =============================================================================
+# 24. DOCKER / CONTAINERS
+# =============================================================================
+
+docker-compose.override.yml
+docker-compose.override.yaml
+
+compose.override.yml
+compose.override.yaml
+
+.docker/
+
+# =============================================================================
+# 25. PODMAN
+# =============================================================================
+
+.podman/
+
+# =============================================================================
+# 26. LOCAL DEVELOPMENT
+# =============================================================================
+
+.local/
+.local-data/
+
+runtime/
+run/
+
+sessions/
+session/
+
+storage/private/
+storage/logs/
+
+uploads/private/
+
+# =============================================================================
+# 27. GENERATED DOCUMENTATION
+# =============================================================================
+
+site/
+docs/_build/
+
+.docusaurus/
+.vuepress/dist/
+
+# =============================================================================
+# 28. TEST / COVERAGE OUTPUT
+# =============================================================================
+
+coverage/
+.coverage
+
+test-results/
+playwright-report/
+
+.nyc_output/
+
+junit.xml
+
+# =============================================================================
+# 29. CYPRESS / PLAYWRIGHT
+# =============================================================================
+
+cypress/videos/
+cypress/screenshots/
+
+playwright-report/
+test-results/
+
+# =============================================================================
+# 30. BASE44 / WEB PROJECT LOCAL CONFIG
+# =============================================================================
+
+.base44/local/
+.base44/cache/
+.base44/secrets/
+
+# =============================================================================
+# 31. AI / LOCAL AGENT CONFIGURATION
+# =============================================================================
+
+.ai/
+.ai-local/
+
+.claude/settings.local.json
+
+.cursor/local/
+.cursor/*.local.*
+
+.codex/local/
+
+# =============================================================================
+# 32. PERSONAL NOTES / INTERNAL DOCUMENTATION
+# =============================================================================
+
+private-notes/
+internal-notes/
+personal-notes/
+
+PRIVATE.md
+INTERNAL.md
+
+# =============================================================================
+# 33. SECURITY REPORTS / SCANS
+# =============================================================================
+
+security-reports/private/
+audit-reports/private/
+
+scans/
+reports/private/
+
+# =============================================================================
+# 34. LOCAL API / MOCK DATA
+# =============================================================================
+
+mock-data/private/
+fixtures/private/
+
+api-keys.json
+api_keys.json
+
+# =============================================================================
+# 35. MISC GENERATED FILES
+# =============================================================================
+
+.cache/
+cache/
+
+generated/
+generated-files/
+
+*.pid
+*.pid.lock
+
+*.seed
+
+# =============================================================================
+# 36. NEVER COMMIT
+# =============================================================================
+
+.env.production.local
+.env.development.local
+.env.test.local
+
+master.key
+credentials.yml.enc
+
+service-account.json
+service_account.json
+
+firebase-adminsdk*.json
+
+client_secret*.json
+
+oauth*.json
+
+# =============================================================================
+# END
+# =============================================================================

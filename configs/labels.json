@@ -1,0 +1,88 @@
+{
+    "dimensions": [
+        {
+            "id": "sponsor_identifie",
+            "label": "Sponsor Identifié",
+            "role": "MUST"
+        },
+        {
+            "id": "referent_metier",
+            "label": "Référent Métier",
+            "role": "MUST"
+        },
+        {
+            "id": "budget_identifie",
+            "label": "Budget Identifié",
+            "role": "MUST"
+        },
+        {
+            "id": "donnees_accessibles",
+            "label": "Données Accessibles",
+            "role": "MUST"
+        },
+        {
+            "id": "criteres_succes_definis",
+            "label": "Critères Succès Définis",
+            "role": "MUST"
+        },
+        {
+            "id": "conformite_reglementaire",
+            "label": "Conformité Réglementaire",
+            "role": "MUST"
+        },
+        {
+            "id": "qualite_et_structure_des_donnees",
+            "label": "Qualité et Structure des données",
+            "role": "SHOULD"
+        },
+        {
+            "id": "volume_historique",
+            "label": "Volume Historique",
+            "role": "SHOULD"
+        },
+        {
+            "id": "competence_tech_mobilisable",
+            "label": "Compétence Tech Mobilisable",
+            "role": "SHOULD"
+        },
+        {
+            "id": "processus_cartographie",
+            "label": "Processus Cartographié",
+            "role": "SHOULD"
+        },
+        {
+            "id": "utilisateurs_consultes",
+            "label": "Utilisateurs Consultés",
+            "role": "SHOULD"
+        },
+        {
+            "id": "gouvernance_pilotage",
+            "label": "Gouvernance Pilotage",
+            "role": "SHOULD"
+        }
+    ],
+    "status_must": [
+        "validee",
+        "manquante",
+        "preuve_manquante",
+        "absent"
+    ],
+    "status_should": [
+        "favorable",
+        "en_effort",
+        "defavorable",
+        "absent"
+    ],
+    "status_must_by_source_role": {
+        "rapport": [
+            "manquante",
+            "preuve_manquante",
+            "absent"
+        ],
+        "entreprise": [
+            "validee",
+            "manquante",
+            "absent"
+        ]
+    }
+}
